@@ -1,6 +1,10 @@
 {
   "name": "core-components-v1",
-  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kmohanraj/core-components.git"
+  },
+  "version": "0.0.2",
   "description": "Core components",
   "main": "dist/cjs/index",
   "module": "dist/esm/index.js",
@@ -8,7 +12,9 @@
     "dist"
   ],
   "scripts": {
+    "prepack": "npm run build:esm && npm run build:cjs",
     "build": "rm -rf dist/ && npm run build:esm && npm run build:cjs",
+    "prepare": "npm run build:esm && npm run build:cjs",
     "build:esm": "tsc",
     "build:cjs": "tsc --module CommonJs --outDir dist/cjs"
   },
