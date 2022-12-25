@@ -1,0 +1,7 @@
+# dependencies
+/node_modules
+/dist
+/.pnp
+.pnp.js
+.vscode/
+package-lock.json
