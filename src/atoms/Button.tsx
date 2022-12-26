@@ -1,11 +1,14 @@
 import React, { FC } from 'react';
-// import cx from 'classnames';
+import cx from 'classnames';
+import './button.style.module.scss';
 // import '../styles/button.scss';
 
-export interface IButtonProps extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
+export interface IButtonProps {
   backgroundColor?: string;
   color?: string;
   label: string;
+  type: string;
+  loading?: boolean;
 }
 
 // export interface IButtonProps extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
@@ -18,15 +21,11 @@ export interface IButtonProps extends React.DetailedHTMLProps<React.ButtonHTMLAt
 // };
 
 export const Button: FC<IButtonProps> = (props) => {
-  const { label, color, backgroundColor, style } = props;
-  // const btnCls = cx('asr-btn', `asr-btn__${type}`, { loading: loading });
-  let _style: React.CSSProperties = style || {};
+  const { label, type, loading } = props;
+  const btnCls = cx('asr-btn', `asr-btn__${type}`, { loading: loading });
+  // let _style: React.CSSProperties = style || {};
 
-  if (backgroundColor && _style) _style.backgroundColor = backgroundColor;
-  if (color && _style) _style.color = color;
-  return (
-    <button style={_style} {...props}>
-      {label}
-    </button>
-  );
+  // if (backgroundColor && _style) _style.backgroundColor = backgroundColor;
+  // if (color && _style) _style.color = color;
+  return <button className={btnCls}>{label}</button>;
 };
