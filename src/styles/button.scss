@@ -1,5 +1,18 @@
-@import './colors';
-@import './fonts';
+$charcoal-grey: #212121;
+$slate-grey: #494949;
+$light-grey: #cdcdcd;
+$medium-grey: #989898;
+$dark-grey: #757575;
+$danger: #d10000;
+$kohler-blue: #022e49;
+$stone-grey: #424242;
+$cool-grey: #a9a9a9;
+$off-white: #f9f9f9;
+$carbon: #5d5d5d;
+
+$font-regular: 'HelveticaNowTextRegular';
+$font-medium: 'HelveticaNowTextMedium';
+$font-bold: 'HelveticaNowTextBold';
 
 .asr-btn {
   width: 200px;

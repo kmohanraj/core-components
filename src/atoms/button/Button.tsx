@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import cx from 'classnames';
-import './button.style.module.scss';
-// import '../styles/button.scss';
+import './button.scss';
 
 export interface IButtonProps {
   backgroundColor?: string;
