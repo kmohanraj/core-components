@@ -12,14 +12,8 @@
     "dist"
   ],
   "scripts": {
-    "build:one": "tsc && webpack",
-    "webpack": "webpack",
-    "tsc": "tsc",
-    "prepack": "npm run build:esm && npm run build:cjs",
-    "build": "rm -rf dist/ && npm run build:esm && npm run build:cjs",
-    "prepare": "npm run build:esm && npm run build:cjs",
-    "build:esm": "tsc",
-    "build:cjs": "tsc --module CommonJs --outDir dist/cjs"
+    "build": "webpack",
+    "tsc": "tsc"
   },
   "author": "Mohanraj K",
   "license": "MTI",
